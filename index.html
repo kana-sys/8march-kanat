@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 8 Наурыз Құтты Болсын! 🌸</title>
+    <style>
+        body {
+            text-align: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        .container {
+            margin-top: 50px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 42px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            font-size: 22px;
+            margin: 20px;
+        }
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            animation: float 3s infinite ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Қымбатты Милана, Махаббат, Медина, анашым, әжем! ✨</h1>
+        <p>💖 8 Наурыз - Халықаралық әйелдер күні құтты болсын! 💖<br> 
+        Сіздерге шексіз махаббат, шаттық пен бақыт тілеймін! Әр күніңіз гүлдей жайнап, 
+        жүректеріңіз тек қуанышпен соқсын! 🌷💐🌸</p>
+    </div>
+    <script>
+        function createHearts(count) {
+            for (let i = 0; i < count; i++) {
+                let heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * window.innerWidth + 'px';
+                heart.style.top = Math.random() * window.innerHeight + 'px';
+                document.body.appendChild(heart);
+            }
+        }
+        createHearts(20);
+    </script>
+</body>
+</html>
